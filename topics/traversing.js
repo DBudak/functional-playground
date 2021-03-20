@@ -1,7 +1,5 @@
 import * as R from "rambda";
 
-console.clear();
-
 const debug = (x) => {
   console.log(x);
   return x;
@@ -45,16 +43,8 @@ const isResponseReceived = R.compose(
 );
 isResponseReceived(res);
 
-const getName = (o) => prop(o, "name");
-const getEntities = (o) => prop(o, "entities");
+const getNameW = R.compose(map(prop("name")), prop("entities"));
 
-const getDragonNames = R.compose(
-  debug,
-  map(getName),
-  debug,
-  map(getEntities),
-  debug,
-  prop("items")
-);
+const getDragonNames = R.compose(debug, map(getNameW), prop("items"));
 
-getDragonNames(res);;
+getDragonNames(res);
