@@ -12,5 +12,5 @@ https://ramdajs.com/
 Monads:
 https://folktale.origamitower.com/
 
-Extensive list of everything FP to learn/us in JS:
+Extensive list of everything FP to learn/use in JS:
 https://github.com/stoeffel/awesome-fp-js
